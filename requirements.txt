@@ -1,0 +1,12 @@
+Flask == 1.1.*
+flask-marshmallow == 0.10.*
+Flask-RESTful == 0.3.*
+Flask-SQLAlchemy == 2.3.*
+marshmallow == 3.0.*
+marshmallow-sqlalchemy == 0.16.*
+SQLAlchemy == 1.2.*
+Werkzeug == 0.15.*
+boto3==1.5.22
+webargs==5.4
+PyMySQL==0.7.11
+requests
