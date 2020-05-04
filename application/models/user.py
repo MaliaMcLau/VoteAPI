@@ -5,16 +5,19 @@ from flask import current_app
 
 from application.flask_essentials import database
 
-class CandidateModel( database.Model ):
-    """Details the SQL schema for candidate"""
+class UserModel( database.Model ):
+    """Details the SQL schema for user"""
 
-    __tablename__ = 'candidate'
+    __tablename__ = 'user'
     id = database.Column(
         SMALLINT, primary_key = True, autoincrement = True, nullable = False
     )
     name = database.Column(
-        database.String(200), nullable = False
+        database.String(20), nullable = False
     )
-    election_id = database.Column(
-        SMALLINT, nullable = False
+    username_hash = database.Column(
+        database.String(50), nullable = False
+    )
+    password_hash = database.Column(
+        database.String(100), nullable = False
     )
