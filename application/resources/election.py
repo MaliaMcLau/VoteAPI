@@ -5,7 +5,7 @@ class Election( Resource ):
 
     schema = ElectionSchema()
 
-    def get( self ):
+    def get( self, id ):
         pass
 
     def post( self ):

@@ -5,7 +5,7 @@ class User( Resource ):
 
     schema = UserSchema()
 
-    def get( self ):
+    def get( self, id ):
         pass
 
     def post( self ):

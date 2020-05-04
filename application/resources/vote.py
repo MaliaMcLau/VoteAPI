@@ -5,7 +5,7 @@ class Vote( Resource ):
 
     schema = VoteSchema()
 
-    def get( self ):
+    def get( self, id ):
         pass
 
     def post( self ):

@@ -5,7 +5,7 @@ class Candidate( Resource ):
 
     schema = CandidateSchema()
 
-    def get( self ):
+    def get( self, id ):
         pass
 
     def post( self ):

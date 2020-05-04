@@ -28,6 +28,12 @@ def create_app():
     database.init_app( app )
     api = Api( app )
 
+    api.add_resource( Candidate, '/candidate/', '/candidate/<int:id>/' )
+    api.add_resource( Election, '/election/', '/election/<int:id>/' )
+    api.add_resource( User, '/user/', '/user/<int:id>/' )
+    api.add_resource( Vote, '/vote/', '/vote/<int:id>/' )
+
+
     @app.errorhandler( ValidationError )
     def handle_invalid( error ):
         response = jsonify( error.messages )
@@ -38,12 +44,6 @@ def create_app():
     def handle_integrity( error ):
         response = jsonify( {} )
         response.status_code = 422
-        return response
-
-    @app.errorhandler( HasBindingError )
-    def handle_disallowed( error ):
-        response = jsonify( error.messages )
-        response.status_code = 409
         return response
 
     @app.errorhandler( NoResultFound )
