@@ -19,7 +19,7 @@ class ElectionModel( database.Model ):
         database.DateTime, nullable = False
     )
     duration = database.Column(
-        database.MEDIUMINT, nullable = False
+        MEDIUMINT, nullable = False
     )
     type = database.Column(
         database.String(10), nullable = False
