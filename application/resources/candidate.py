@@ -2,7 +2,7 @@ from flask_restful import Resource
 from sqlalchemy.exc import IntegrityError
 
 from application.schemas.candidate import CandidateSchema
-from application.controllers import get_candidate_by_id, get_candidates_by_election
+from application.controllers import get_candidate_by_id
 
 class Candidate( Resource ):
 
