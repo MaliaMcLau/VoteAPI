@@ -3,7 +3,7 @@ from marshmallow import fields
 from marshmallow_sqlalchemy import ModelSchema
 
 from application.flask_essentials import database
-from application.models.User import UserModel
+from application.models.user import UserModel
 
 
 class UserSchema( ModelSchema ):

@@ -1,12 +1,16 @@
-from application.schemas.user import UserSchema
 from flask_restful import Resource
+
+from application.schemas.user import UserSchema
+from application.resources import get_user_by_id
 
 class User( Resource ):
 
     schema = UserSchema()
 
     def get( self, id ):
-        pass
+        return self.schema.dump(
+            get_user_by_id( user_id = id )
+        ), 200
 
     def post( self ):
         pass

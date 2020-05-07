@@ -1,12 +1,16 @@
-from application.schemas.vote import VoteSchema
 from flask_restful import Resource
+
+from application.schemas.vote import VoteSchema
+from application.resources import get_vote_by_id
 
 class Vote( Resource ):
 
     schema = VoteSchema()
 
     def get( self, id ):
-        pass
+        return self.schema.dump(
+            get_vote_by_id( vote_id = id )
+        ), 200
 
     def post( self ):
         pass
