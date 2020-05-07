@@ -1,7 +1,7 @@
 from flask_restful import Resource
 
 from application.schemas.user import UserSchema
-from application.resources import get_user_by_id
+from application.controllers.user import get_user_by_id
 
 class User( Resource ):
 

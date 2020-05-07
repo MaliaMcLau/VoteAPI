@@ -1,7 +1,7 @@
 from flask_restful import Resource
 
 from application.schemas.election import ElectionSchema
-from application.resources import get_election_by_id
+from application.controllers.election import get_election_by_id
 
 class Election( Resource ):
 

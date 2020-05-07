@@ -1,7 +1,7 @@
 from flask_restful import Resource
 
 from application.schemas.vote import VoteSchema
-from application.resources import get_vote_by_id
+from application.controllers.vote import get_vote_by_id
 
 class Vote( Resource ):
 
